@@ -58,4 +58,4 @@ const apps = [
   }
 ];
 
-render({ loading: true, isIFrame: false, apps });
+render({ loading: true, isIFrame: true, apps });

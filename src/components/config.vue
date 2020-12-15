@@ -4,7 +4,6 @@
  * @LastEditTime: 2020-12-14 10:35:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
- * @FilePath: /qiankun/examples/main/components/config.vue
 -->
 <script>
 export default {
