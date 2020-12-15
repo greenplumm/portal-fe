@@ -30,7 +30,7 @@ if (program.all) {
       `rsync -avP --exclude=node_modules/ server ${config.USER}@${config.HOST}:${config.SERVER_FILE}`
     );
     console.log(
-      chalk.yellow(figlet.textSync('portal-fe', { 'horizontalLayout': 'full' }))
+      chalk.yellow(figlet.textSync('portal-fe', { horizontalLayout: 'full' }))
     );
   }
   console.log(chalk.red('亲~ 部署完了哦~'));

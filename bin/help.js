@@ -12,7 +12,7 @@ const figlet = require('figlet');
 function help() {
   console.log(
     chalk.yellow(
-      figlet.textSync('- portal - fe -', { 'horizontalLayout': 'full' })
+      figlet.textSync('- portal - fe -', { horizontalLayout: 'full' })
     )
   );
   console.log('');
