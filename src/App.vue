@@ -1,21 +1,22 @@
 <template>
   <div class='mainapp'>
     <header>
-      <h1>技术中台开发平台</h1>
+      <h1>xxxx</h1>
     </header>
     <div id='subapp-container'>
-      <el-tabs class='main-c-tabs' v-model="activeName" @tab-click="handleClick">
-        <el-tab-pane label="服务编排" name="first" style="height: 100vh">
-          <iframe v-if="isIFrame" src='http://localhost:8081' marginTop="0" width='100%' height='100%' border='0'/>
+      <!-- <el-tabs class='main-c-tabs' v-model="activeName" @tab-click="handleClick">
+        <el-tab-pane label="fw" name="first" style="height: 100vh">
+
           <div id="flow-design" v-if="!isIFrame">Loading...</div>
         </el-tab-pane>
-        <el-tab-pane label="脚手架" name="second">
+        <el-tab-pane label="www" name="second">
           <div id="scaffolding">purehtml loading...</div>
         </el-tab-pane>
         <el-tab-pane v-if="!isIFrame" label="配置中心" name="third">
           <router-view />
         </el-tab-pane>
-      </el-tabs>
+      </el-tabs> -->
+      <Page1 />
     </div>
   </div>
 </template>
@@ -23,10 +24,12 @@
 import { loadMicroApp } from 'qiankun';
 import Config from './components/config.vue';
 import { SCAFFOLDING_NAME, FLOW_DESIGN_NAME } from './utils/constants';
+import Page1 from './features/page1';
 
 export default {
   components: {
-    Config
+    Config,
+    Page1
   },
   props: {
     loading: Boolean,
@@ -39,10 +42,10 @@ export default {
     };
   },
   created() {
-    const flowDesign = this.apps.find((curr) => (curr.name === FLOW_DESIGN_NAME));
-    if (!this.isIFrame) {
-      loadMicroApp(flowDesign);
-    }
+    // const flowDesign = this.apps.find((curr) => (curr.name === FLOW_DESIGN_NAME));
+    // if (!this.isIFrame) {
+    //   loadMicroApp(flowDesign);
+    // }
   },
   methods: {
     handleClick(tab) {
