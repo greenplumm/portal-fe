@@ -9,7 +9,7 @@
     highlight-current-row
     @expand-chang="expandChange"
   >
-    <slot name="column">
+    <slot>
     </slot>
     <slot name="op">
     </slot>
@@ -32,9 +32,19 @@ export default {
       expandedRows: [],
     };
   },
+  components: {
+    Vnodes: {
+      functional: true,
+      render: (h, ctx) => {
+        console.log('ctx', ctx, this);
+        return this.$children;
+      }
+    }
+  },
   created() {
   },
   mounted() {
+    console.log('this tb', this);
   },
   methods: {
     getRowKeys(row) {

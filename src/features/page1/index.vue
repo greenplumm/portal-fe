@@ -1,10 +1,9 @@
 <template>
   <div class="content">
      <Tb
-      :dataSource="dataSource"
+      :data-source="dataSource"
      >
-       <div slot="column">
-          <el-table-column label="title" props="title">
+       <el-table-column label="title" props="title">
             <template slot-scope="scope">
               <span>{{scope.row.title}}</span>
             </template>
@@ -13,8 +12,7 @@
             <template slot-scope="scope">
               <span>{{scope.row.url}}</span>
             </template>
-          </el-table-column>
-       </div>
+        </el-table-column>
      </Tb>
   </div>
 </template>
@@ -23,7 +21,6 @@
 import Tb from './sub/tb';
 
 export default {
-  name: 'Page1',
   components: {
     Tb
   },

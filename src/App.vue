@@ -16,6 +16,7 @@
           <router-view />
         </el-tab-pane>
       </el-tabs> -->
+      {{activeName}}
       <Page1 />
     </div>
   </div>
